@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body .mainBox {
+  background-color: white;
+  width: 380px;
+  height: 380px;
+  margin: 100px 0 0 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px 2px rgba(138, 138, 138, 0.3);
+  font-family: "Poppins", "Cairo", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+/* body .mainBox .img{
+    width: 350px;
+    height: 400px;
+    background-color: rgb(153, 175, 185);
+} */
+
+.text {
+  display: flex;
+ 
+  margin: 10px 0 0 30px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.welcom {
+  font-size: 13px;
+  padding-bottom: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcom p {
+  width: 100%;
+  color: rgb(105, 104, 104);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.form label {
+  padding-bottom: 5px;
+}
+.form input {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(175, 174, 174);
+  width: 300px;
+  height: 35px;
+}
+
+.form a {
+  margin-bottom: 15px;
+  width: 300px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(51, 138, 252);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.form input::placeholder {
+  padding-left: 10px;
+}
+.foot {
+  display: flex;
+  flex-direction: row;
+  padding-left: 40px;
+}
+
+.foot a{
+  text-decoration: none;
+  color:rgb(32, 96, 180); 
+  padding-left: 5px;
+}
