@@ -488,3 +488,109 @@ footer .par {
     grid-template-columns: 1fr;
   }
 }
+
+.dark-btn {
+  background: rgb(54, 130, 230);
+  color: white;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-btn i {
+  font-size: 15px;
+}
+
+body.dark {
+  background: #0f172a;
+  color: white;
+}
+
+body.dark .navbar {
+  background: #111827;
+}
+
+body.dark .navbar ul li a {
+  color: white;
+}
+
+body.dark .sec1,
+body.dark .sec3 {
+  background: #0f172a;
+}
+
+body.dark .sec1 .boxsec1 div,
+body.dark .products,
+body.dark .sec3 form {
+  background: #111827;
+  color: white;
+}
+
+body.dark .products .img {
+  background: #1f2937;
+}
+
+body.dark footer {
+  background: #020617;
+}
+
+
+header {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(54, 130, 230, 0.18), transparent 35%),
+    linear-gradient(180deg, #ffffff 0%, #f5f7ff 100%);
+}
+
+header .contener {
+  min-height: 90vh;
+}
+
+.hero-badge {
+  background: rgba(54, 130, 230, 0.12);
+  color: rgb(54, 130, 230);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+header .contener h1 {
+  max-width: 760px;
+  font-size: 64px;
+}
+
+header .contener p {
+  font-size: 18px;
+  max-width: 620px;
+}
+
+header .contener div .btn2,
+header .contener div .primbtn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+body.dark header {
+  background:
+    radial-gradient(circle at top left, rgba(54, 130, 230, 0.28), transparent 35%),
+    linear-gradient(180deg, #0f172a 0%, #111827 100%);
+}
+
+body.dark header .contener p {
+  color: #b6c1d1;
+}
+
+body.dark .hero-badge {
+  background: rgba(54, 130, 230, 0.18);
+}
+
+body.dark .primbtn {
+  color: white !important;
+}

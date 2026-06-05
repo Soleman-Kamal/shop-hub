@@ -19,36 +19,64 @@
           <li><a href="#about">About</a></li>
           <li><a href="#products" class="productTit">Products</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#login" class="btn btnLogin">Login</a></li>
+          <li>
+  <button id="darkModeBtn" class="dark-btn">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+</li>
+          <li>
+  <a href="cart.html" class="cart-link">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Cart <span id="cartCount">0</span>
+  </a>
+</li>
         </ul>
       </div>
     </header>
        <section class="sec2">
         <div class="titSec2">
           <h1>All Products</h1>
+
         </div>
+        <div class="shop-tools">
+  <input type="text" id="searchInput" placeholder="Search for products..." />
+
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="phones">Phones</button>
+    <button class="filter-btn" data-category="computers">Computers</button>
+    <button class="filter-btn" data-category="accessories">Accessories</button>
+    <button class="filter-btn" data-category="gaming">Gaming</button>
+  </div>
+</div>
          <div class="porBoxs">
-          <div class="products">
+          <div class="products" data-category="phones">
             <div class="img">
               <img src="./product/imgg/smartphones.png" alt="" />
             </div>
             <div>
               <h1>Smartphone Pro</h1>
               <p>$799</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="computers">
             <div class="img">
               <img src="./product/imgg/laptop.png" alt="" />
             </div>
             <div>
               <h1>Laptop Ultra</h1>
               <p>$1,299</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="phones">
             <div class="img">
               <img src="./product/imgg/headphone.png" alt="" />
             </div>
@@ -56,96 +84,126 @@
             <div>
               <h1>Wireless Headphones</h1>
               <p>$199</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="accessories">
             <div class="img">
               <img src="./product/imgg/time.png" alt="" />
             </div>
             <div>
               <h1>Smart Watch</h1>
               <p>$349</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="accessories">
                 <div class="img">
               <img src="./product/imgg/camera.png" alt="" />
             </div>
             <div>
               <h1>Digital Camera</h1>
               <p>$899</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="computers">
                 <div class="img">
               <img src="./product/imgg/computer.png" alt="" />
             </div>
             <div>
               <h1>Desktop Monitor</h1>
               <p>$349</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="computers">
                <div class="img">
               <img src="./product/imgg/wired-keyboard.png" alt="" />
             </div>
             <div>
               <h1>Mechanical Keyboard</h1>
               <p>$349</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="computers">
               <div class="img">
               <img src="./product/imgg/mouse-clicker.png" alt="" />
             </div>
             <div>
               <h1>Gaming Mouse</h1>
               <p>$79</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="gaming">
                 <div class="img">
               <img src="./product/imgg/game-console.png" alt="" />
             </div>
             <div>
               <h1>Game Console</h1>
               <p>$499</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="accessories">
              <div class="img">
               <img src="./product/imgg/speaker.png" alt="" />
             </div>
             <div>
               <h1>Bluetooth Speaker</h1>
               <p>$149</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="computers">
               <div class="img">
               <img src="./product/imgg/wifi.png" alt="" />
             </div>
             <div>
               <h1>WiFi Router</h1>
               <p>$199</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
-          <div class="products">
+          <div class="products" data-category="phones">
               <div class="img">
               <img src="./product/imgg/powerbank.png" alt="" />
             </div>
             <div>
               <h1>Power Bank</h1>
               <p>$59</p>
+              <button class="wish-btn">
+  <i class="fa-regular fa-heart"></i>
+</button>
               <button class="btn">Add to Cart</button>
             </div>
           </div>
@@ -191,5 +249,9 @@
        <hr>
         <p class="par">2024 shopHup. All rights reserved.</p>
     </footer>
+
+    <div id="toast">Product added to cart ✅</div>
+<script src="product/product.js"></script>
+</body>
   </body>
 </html>
