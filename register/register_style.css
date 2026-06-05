@@ -6,37 +6,37 @@
   padding: 0;
 }
 
-
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f4f8;
+  padding: 20px;
+  font-family: "Poppins", "Cairo", system-ui, sans-serif;
+  overflow-x: hidden;
+}
 
 body .mainBox {
   background-color: white;
-  width: 380px;
-  height: 550px;
-  margin: 30px 0 0 500px;
+  width: 100%;
+  max-width: 380px;
+  min-height: 550px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 25px 20px;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0px 0px 15px 2px rgba(138, 138, 138, 0.3);
-  font-family: "Poppins", "Cairo", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial;
 }
-
-/* body .mainBox .img{
-    width: 350px;
-    height: 400px;
-    background-color: rgb(153, 175, 185);
-} */
 
 .text {
   display: flex;
- 
-  margin: 10px 0 0 30px;
   width: 100%;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
+
 .welcom {
   font-size: 13px;
   padding-bottom: 15px;
@@ -49,48 +49,66 @@ body .mainBox {
   width: 100%;
   color: rgb(105, 104, 104);
 }
+
 .form {
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
+  width: 100%;
 }
+
 .form label {
   padding-bottom: 5px;
 }
+
 .form input {
   margin-bottom: 15px;
   border-radius: 5px;
   outline: none;
   border: 1px solid rgb(175, 174, 174);
-  width: 300px;
-  height: 35px;
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
 }
 
 .form a {
   margin-bottom: 15px;
-  width: 300px;
-  height: 30px;
-  outline: none;
-  border: none;
+  width: 100%;
+  height: 36px;
   border-radius: 7px;
   background-color: rgb(51, 138, 252);
   color: white;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+  line-height: 36px;
 }
 
-.form input::placeholder {
-  padding-left: 10px;
-}
 .foot {
   display: flex;
   flex-direction: row;
-  padding-left: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 14px;
 }
 
-.foot a{
+.foot a {
   text-decoration: none;
-  color:rgb(32, 96, 180); 
-  padding-left: 5px;
+  color: rgb(32, 96, 180);
+}
+
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+  }
+
+  body .mainBox {
+    max-width: 100%;
+    min-height: auto;
+    margin-top: 20px;
+  }
+
+  .welcom {
+    font-size: 12px;
+  }
 }
