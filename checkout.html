@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="product/product_style.css" />
+  <link rel="stylesheet" href="product/checkout_style.css" />
+
+  <title>Checkout | NovaCart</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bag-shopping"></i> NovaCart
+      </a>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li>
+          <button id="darkModeBtn" class="dark-btn">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="checkout-section">
+    <div class="checkout-hero">
+      <span>Secure Checkout</span>
+      <h1>Complete Your Order</h1>
+      <p>Enter your delivery details and choose your preferred payment method.</p>
+    </div>
+
+    <div class="checkout-steps">
+      <div class="step done"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></div>
+      <div class="line done"></div>
+      <div class="step active"><i class="fa-solid fa-credit-card"></i><span>Checkout</span></div>
+      <div class="line"></div>
+      <div class="step"><i class="fa-solid fa-check"></i><span>Complete</span></div>
+    </div>
+
+    <div class="checkout-layout">
+      <form class="checkout-form">
+        <div class="form-card">
+          <div class="form-title">
+            <i class="fa-solid fa-truck-fast"></i>
+            <div>
+              <h2>Delivery Details</h2>
+              <p>We need these details to deliver your order safely.</p>
+            </div>
+          </div>
+
+          <div class="input-grid">
+            <div class="input-box">
+              <label>Full Name</label>
+              <input type="text" placeholder="John Smith" required />
+            </div>
+
+            <div class="input-box">
+              <label>Email Address</label>
+              <input type="email" placeholder="john@email.com" required />
+            </div>
+
+            <div class="input-box">
+              <label>Phone Number</label>
+              <input type="text" placeholder="+1 234 567 8911" required />
+            </div>
+
+            <div class="input-box">
+              <label>City</label>
+              <input type="text" placeholder="Your city" required />
+            </div>
+          </div>
+
+          <div class="input-box">
+            <label>Full Address</label>
+            <input type="text" placeholder="Street, building, apartment..." required />
+          </div>
+        </div>
+
+        <div class="form-card">
+          <div class="form-title">
+            <i class="fa-solid fa-wallet"></i>
+            <div>
+              <h2>Payment Method</h2>
+              <p>Choose how you want to pay for this order.</p>
+            </div>
+          </div>
+
+          <div class="payment-methods">
+            <label class="payment-option">
+              <input type="radio" name="payment" checked />
+              <span><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</span>
+            </label>
+
+            <label class="payment-option">
+              <input type="radio" name="payment" />
+              <span><i class="fa-brands fa-cc-visa"></i> Visa / Mastercard</span>
+            </label>
+
+            <label class="payment-option">
+              <input type="radio" name="payment" />
+              <span><i class="fa-brands fa-paypal"></i> PayPal</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn place-order">
+            Place Order <i class="fa-solid fa-lock"></i>
+          </button>
+        </div>
+      </form>
+
+      <aside class="order-summary">
+        <h2>Order Summary</h2>
+
+        <div id="checkoutItems"></div>
+
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <strong id="checkoutSubtotal">$0</strong>
+        </div>
+
+        <div class="summary-line">
+          <span>Delivery</span>
+          <strong>Free</strong>
+        </div>
+
+        <div class="summary-line total">
+          <span>Total</span>
+          <strong id="checkoutTotal">$0</strong>
+        </div>
+
+        <div class="secure-note">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>100% secure checkout and protected customer data.</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-box">
+      <div class="success-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <h2>Order Placed Successfully!</h2>
+      <p>Your order has been received. Thank you for shopping with NovaCart.</p>
+    </div>
+  </div>
+
+  <div id="orderToast">Order placed successfully ✅</div>
+
+  <script src="product/theme.js"></script>
+  <script src="product/checkout.js"></script>
+</body>
+</html>

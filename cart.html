@@ -3,31 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="product/product_style.css" />
-  <title>Cart | ShopHup</title>
+  <link rel="stylesheet" href="product/cart_style.css" />
+  <title>Cart | NovaCart</title>
 </head>
 <body>
   <header>
     <div class="navbar">
-      <a href="index.html" class="logo">ShopHup</a>
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bag-shopping"></i> NovaCart
+      </a>
+
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="product.html">Products</a></li>
+        <li>
+          <button id="darkModeBtn" class="dark-btn">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
       </ul>
     </div>
   </header>
 
   <section class="cart-section">
-    <h1>Your Cart</h1>
-    <div id="cartItems"></div>
+    <div class="cart-hero">
+      <span>Your Shopping Bag</span>
+      <h1>Review Your Cart</h1>
+      <p>Manage your products, apply coupons, and complete your secure checkout.</p>
+    </div>
 
-    <div class="cart-summary">
-      <h2>Total: <span id="totalPrice">$0</span></h2>
-      <button class="btn checkout-btn">Checkout</button>
-      <button class="clear-btn" id="clearCart">Clear Cart</button>
+    <div class="checkout-steps">
+      <div class="step active"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></div>
+      <div class="line active"></div>
+      <div class="step"><i class="fa-solid fa-credit-card"></i><span>Checkout</span></div>
+      <div class="line"></div>
+      <div class="step"><i class="fa-solid fa-check"></i><span>Complete</span></div>
+    </div>
+
+    <div class="shipping-card">
+      <div>
+        <h3>Free Shipping Progress</h3>
+        <p id="shippingText">Add more products to unlock free shipping.</p>
+      </div>
+      <div class="shipping-bar">
+        <span id="shippingProgress"></span>
+      </div>
+    </div>
+
+    <div class="cart-layout">
+      <div class="cart-products-box">
+        <div id="cartItems"></div>
+
+        <div class="recommended-box">
+          <h2>You May Also Like</h2>
+
+          <div class="recommended-grid">
+            <div>
+              <img src="product/imgg/headphone.png" alt="" />
+              <h4>Headphones</h4>
+              <p>$199</p>
+            </div>
+
+            <div>
+              <img src="product/imgg/powerbank.png" alt="" />
+              <h4>Power Bank</h4>
+              <p>$59</p>
+            </div>
+
+            <div>
+              <img src="product/imgg/speaker.png" alt="" />
+              <h4>Speaker</h4>
+              <p>$149</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-summary premium-summary">
+        <h2>Order Summary</h2>
+
+        <div class="coupon-box">
+          <label>Have a coupon?</label>
+          <div>
+            <input type="text" id="couponInput" placeholder="WELCOME20" />
+            <button id="applyCoupon">Apply</button>
+          </div>
+          <small id="couponMessage"></small>
+        </div>
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="totalPrice">$0</strong>
+        </div>
+
+        <div class="summary-row">
+          <span>Discount</span>
+          <strong id="discountPrice">$0</strong>
+        </div>
+
+        <div class="summary-row">
+          <span>Delivery</span>
+          <strong>Free</strong>
+        </div>
+
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <strong id="finalTotal">$0</strong>
+        </div>
+
+        <a href="checkout.html" class="btn checkout-btn">
+          Checkout Now <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <button class="clear-btn" id="clearCart">
+          <i class="fa-solid fa-trash"></i> Clear Cart
+        </button>
+      </div>
     </div>
   </section>
 
+  <div id="cartToast">Cart updated successfully ✅</div>
+
+  <script src="product/theme.js"></script>
   <script src="product/cart.js"></script>
 </body>
 </html>

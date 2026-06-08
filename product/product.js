@@ -93,24 +93,49 @@ wishButtons.forEach((button) => {
   });
 });
 
-/* Dark Mode */
+const quickView = document.getElementById("quickView");
+const closeView = document.getElementById("closeView");
+const quickImg = document.getElementById("quickImg");
+const quickName = document.getElementById("quickName");
+const quickPrice = document.getElementById("quickPrice");
+const quickAdd = document.getElementById("quickAdd");
 
-const darkModeBtn = document.getElementById("darkModeBtn");
+let selectedProduct = null;
 
-function applyTheme() {
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-    darkModeBtn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
-  } else {
-    document.body.classList.remove("dark");
-    darkModeBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
-  }
-}
+document.querySelectorAll(".quick-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".products");
 
-darkModeBtn.addEventListener("click", () => {
-  const isDark = document.body.classList.toggle("dark");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-  applyTheme();
+    selectedProduct = {
+      name: card.querySelector("h1").textContent,
+      price: card.querySelector("p").textContent,
+      image: card.querySelector("img").src,
+      quantity: 1,
+    };
+
+    quickImg.src = selectedProduct.image;
+    quickName.textContent = selectedProduct.name;
+    quickPrice.textContent = selectedProduct.price;
+
+    quickView.classList.add("show");
+  });
 });
 
-applyTheme();
+closeView.addEventListener("click", () => {
+  quickView.classList.remove("show");
+});
+
+quickAdd.addEventListener("click", () => {
+  const existingProduct = cart.find((item) => item.name === selectedProduct.name);
+
+  if (existingProduct) {
+    existingProduct.quantity++;
+  } else {
+    cart.push(selectedProduct);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
+  showToast();
+  quickView.classList.remove("show");
+});
